@@ -1,2 +1,3 @@
-# javascript_provider_sample
-Sample Synerex Provider for Javascript
+# nodejs_provider_sample
+Sample Synerex Provider for NodeJS
+
