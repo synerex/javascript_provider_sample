@@ -1,0 +1,29 @@
+{
+  "name": "nodejs_provider_sample",
+  "version": "1.0.0",
+  "description": "Node.js sample provider for Synerex",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synerex/nodejs_provider_sample.git"
+  },
+  "keywords": [
+    "Synerex"
+  ],
+  "author": "Nobuo Kawaguchi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/synerex/nodejs_provider_sample/issues"
+  },
+  "homepage": "https://github.com/synerex/nodejs_provider_sample#readme",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.3",
+    "commander": "^4.0.1",
+    "grpc": "^1.24.2",
+    "nodejs-snowflake": "^1.4.1",
+    "save": "^2.4.0"
+  }
+}
