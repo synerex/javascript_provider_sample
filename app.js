@@ -129,6 +129,31 @@ function connectSynerexServer(resp){
 }
 
 
+function startKeepAlive(nClient,resp){
+    global.update = 0;
+    setInterval( () =>{
+        
+        updt = {
+            node_id: resp.node_id,
+            secret : resp.secret,
+            update_count: global.udpate++,
+            node_status: 0,
+            node_arg : "OK"
+        }
+        nClient.KeepAlive(updt, (err,resp)=>{
+            if(!err){
+                console.log("KeepAlive OK",resp);
+
+            }else{
+                console.log("Error!",err);
+            }
+
+        });
+
+    }, resp.keepalive_duration*1000);
+}
+
+
 
 /// main.
 
@@ -155,11 +180,14 @@ nodesvClient.RegisterNode(
 
             connectSynerexServer(resp)
 
+            startKeepAlive(nodesvClient, resp)
+
          }else{
              console.log("Error connecting NodeServ.");
              console.log(err)
          }
 });
+
 
 
 
