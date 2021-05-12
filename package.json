@@ -23,7 +23,7 @@
   "dependencies": {
     "@grpc/proto-loader": "^0.5.3",
     "commander": "^4.0.1",
-    "grpc": "^1.24.2",
+    "grpc": "^1.24.9",
     "save": "^2.4.0"
   }
 }
